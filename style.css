@@ -1,0 +1,120 @@
+
+* {
+  box-sizing: border-box;
+}
+
+/*
+Questa regola si mette spesso all'inizio di un file CSS 
+per rendere più prevedibile e consistente il layout, 
+specialmente in design responsive.
+
+*/
+
+body{
+	font-family:arial;
+	background-color:#7e7f82;
+	text-align: center
+}
+p{
+	color:#ffffff;
+}
+h1{
+	color:#30b052;
+}
+h2{
+	color:#30b052;
+}
+header{
+background-color:#e5e5e5;
+padding:15px;
+text-align:center;
+}
+nav {
+  float:left;
+  width:20%;
+  text-align:center;
+}
+
+nav a {
+  overflow:auto;
+  background-color:#e5e5e5;
+  padding:8px;
+  margin-top:7px;
+  display:block;
+  width:100%;
+  color:black;
+}
+
+article {
+  float:left;
+  width:60%;
+  padding:0 20px;
+}
+aside {
+  background-color:#e5e5e5;
+  float:left;
+  width:20%;
+  padding:15px;
+  margin-top:7px;
+  text-align:center;
+}
+aside p {
+   color:#000000;
+}
+ul{
+	color:#ffffff;
+}
+
+
+section::after{
+	content:"";
+	display:table;
+	clear:both;
+}
+
+/*
+Questa regola viene usata per “contenere” gli elementi 
+flottanti (quelli con float: left/right) dentro 
+un elemento genitore, in questo caso un section.
+
+
+section::after → crea un pseudo-elemento dopo il contenuto
+della <section>
+content: "" → è obbligatorio per generare lo 
+pseudo-elemento
+display: table → serve per dare allo pseudo-elemento una 
+"forma" (può essere anche block, ma table è un vecchio 
+trucco compatibile)
+clear: both → forza l'elemento a "rompere" il flusso 
+dei float precedenti, facendo in modo che la <section> 
+si estenda fino a contenerli
+
+*/
+
+
+
+
+
+footer{
+background-color:#e5e5e5;
+text-align:center;
+padding:10px;
+margin-top:7px;
+}
+
+@media only screen and (max-width:900px){
+
+nav, article, aside {
+
+  width: 100%;
+}
+
+}
+
+/*
+La precedente è una media query,
+quando lo schermo del dispositivo 
+che sta visualizzando la pagina 
+è max 900 px di larghezza, nav, article e aside
+occupano la larghezza max
+*/
